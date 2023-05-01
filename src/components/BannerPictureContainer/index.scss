@@ -1,6 +1,26 @@
-.banner_picture {
-    border-radius: 25px;
-    object-fit: cover;
-    height: 250px;
-    width: 100%;
+.banner_container {
+    position: relative;
+    background-color: black;
+
+    .picture {
+        border-radius: 25px;
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+        opacity: 60%;
+    }
+
+    .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 48px;
+    }
 }

@@ -10,7 +10,7 @@ export default function Home() {
 
     return(
         <div className='homepage_container'>
-            <BannerPictureContainer picture={HomepageBannerPicture} />
+            <BannerPictureContainer picture={HomepageBannerPicture} text={'Chez vous, partout et ailleurs'}/>
             <div className='logements_gallery'>
                 {file.map(l=>(
                     <LogementCard
