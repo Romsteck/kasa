@@ -1,0 +1,15 @@
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 75px;
+
+    nav {
+        display: flex;
+        .link {
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
