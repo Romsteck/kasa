@@ -1,13 +1,22 @@
-import BannerPictureContainer from '../../components/BannerPicture'
+import BannerPictureContainer from '../../components/BannerPictureContainer'
+import CollapseComponent from '../../components/CollapseComponent'
 import AboutBannerPicture from '../../assets/About_Banner.svg'
-
-import CollapseGallery from '../../components/CollapseGallery'
+import aboutData from './details'
+import './index.scss'
 
 export default function About() {
     return(
-        <div>
+        <div className='about_page_container'>
             <BannerPictureContainer picture={AboutBannerPicture} />
-            <CollapseGallery></CollapseGallery>
+            <div className='collapse_gallery'>
+                {aboutData.map((a, index)=>(
+                    <CollapseComponent
+                        title={a.title}
+                        value={a.value}
+                        key={index}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
