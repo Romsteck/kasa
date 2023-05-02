@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import About from './pages/About';
+import Logement from './pages/Logement';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ root.render(
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/logement/:selectedLogementId' element={<Logement />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

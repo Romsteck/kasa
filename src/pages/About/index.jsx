@@ -1,7 +1,7 @@
 import BannerPictureContainer from '../../components/BannerPictureContainer'
 import CollapseComponent from '../../components/CollapseComponent'
 import AboutBannerPicture from '../../assets/About_Banner.svg'
-import aboutData from './details'
+import aboutData from '../../data/details'
 import './index.scss'
 
 export default function About() {
