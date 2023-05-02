@@ -2,11 +2,13 @@ import './index.scss'
 import VectorUp from '../../assets/VectorUp.svg'
 import VectorDown from '../../assets/VectorDown.svg'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 export default function CollapseComponent({ title, value }) {
 
     const [opened, openComponent] = useState(false)
+
+    const parentRef = useRef()
 
     return(
         <div className='collapse_item'>
@@ -14,7 +16,13 @@ export default function CollapseComponent({ title, value }) {
                 <h3 className='title'>{title}</h3>
                 <img src={opened ? VectorUp : VectorDown} alt="Chevron vers le haut"/>
             </div>
-            {opened ? <p className={'value'}>{value}</p> : null}
+            <div
+                className='value-parent'
+                ref={parentRef}
+                style={ opened ? {height: parentRef.current.scrollHeight+'px'} : {height: '0px'} }
+            >
+                <p className='value'>{value}</p>
+            </div>
         </div>
     )
 }

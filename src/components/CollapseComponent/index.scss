@@ -23,8 +23,14 @@
             color: white;
         }
     }
-    .value {
-        background-color: rgba(246, 246, 246);
-        padding: 15px;
+    .value-parent {
+        height: 0px;
+        overflow: hidden;
+        transition: height ease 300ms;
+
+        .value {
+            background-color: rgba(246, 246, 246);
+            padding: 15px;
+        }
     }
 }

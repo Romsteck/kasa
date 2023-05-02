@@ -1,11 +1,13 @@
 .banner_container {
     position: relative;
     background-color: black;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 250px;
 
     .picture {
-        border-radius: 25px;
         object-fit: cover;
-        height: 250px;
+        height: 100%;
         width: 100%;
         opacity: 60%;
     }
