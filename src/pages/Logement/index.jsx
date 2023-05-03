@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import ImagesSlider from "../../components/ImagesSlider"
 import CollapseComponent from "../../components/CollapseComponent"
 import RatingControl from "../../components/rating"
 import Logements from '../../data/logements.json'
@@ -12,7 +13,7 @@ export default function Logement() {
 
     return(
         <div className="logement_page_container">
-            <div className="slider_temp_container"></div>
+            <ImagesSlider links={selectedLogement.pictures} />
             <div className="description_main_container">
                 <div className="presentation_container">
                     <div className="name_location_container">

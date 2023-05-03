@@ -1,0 +1,35 @@
+.images_slider_container {
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+
+    .selected_picture {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .icon {
+        position: absolute;
+        top: calc(50% - 40px);
+        width: 48px;
+        height: 80px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .previous {
+        left: 25px;
+    }
+    .next {
+        right: 25px;
+    }
+
+    .counter {
+        color: white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 30px;
+    }
+}
