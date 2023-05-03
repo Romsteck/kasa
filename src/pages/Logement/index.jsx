@@ -30,8 +30,16 @@ export default function Logement() {
                     </div>
                 </div>
                 <div className="description_container">
-                    <CollapseComponent className='collapse' title='Description' value={selectedLogement.description} />
-                    <CollapseComponent className='collapse' title='Équipements' value={selectedLogement.equipments.join()} />
+                    <CollapseComponent
+                        className='collapse'
+                        title='Description'
+                        value={selectedLogement.description}
+                    />
+                    <CollapseComponent
+                        className='collapse'
+                        title='Équipements'
+                        value={selectedLogement.equipments.map((equipment) => (<>{equipment}<br /></>))}
+                    />
                 </div>
             </div>
         </div>

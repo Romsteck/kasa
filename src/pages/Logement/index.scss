@@ -18,7 +18,7 @@
 
                 .name {
                     font-size: 51px;
-                    margin-bottom: 5px;
+                    margin-bottom: 15px;
                 }
                 .location {
                     margin-bottom: 25px;
@@ -26,6 +26,7 @@
                 .tags_container {
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     gap: 25px;
     
                     .tag_value {
@@ -41,7 +42,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
 
                 .publisher_container {
                     display: flex;
@@ -72,6 +73,27 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+    .logement_page_container {
+        .description_main_container {
+            .presentation_container {
+                flex-direction: column;
 
+                .publisher_rating_container {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .logement_page_container {
+        .description_main_container {
+            .description_container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    }
 }
