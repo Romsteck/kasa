@@ -14,6 +14,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-decoration: none;
+
+            &.active {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -24,6 +29,12 @@
 
         .logo_container {
             height: 50px;
+        }
+
+        nav {
+            .link {
+                text-transform: uppercase;
+            }
         }
     }
 }

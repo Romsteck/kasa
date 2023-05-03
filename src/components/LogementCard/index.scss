@@ -32,6 +32,13 @@
     }
 }
 
+
+@media (max-width: 1024px) {
+    .logement_container {
+        flex-basis: calc(50% - 50px);
+    }
+}
+
 @media (max-width: 640px) {
     .logement_container {
         margin: 0;
