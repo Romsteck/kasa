@@ -18,3 +18,10 @@
 .app_container {
     margin: 25px 75px;
 }
+
+
+@media (max-width: 640px) {
+    .app_container {
+        margin: 15px 25px;
+    }
+}

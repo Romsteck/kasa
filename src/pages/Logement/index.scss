@@ -13,51 +13,56 @@
 
             .name_location_container {
                 margin-bottom: 25px;
+                display: flex;
+                flex-direction: column;
 
                 .name {
                     font-size: 51px;
                     margin-bottom: 5px;
                 }
-            }
-            .publisher_container {
-                display: flex;
-                flex-direction: row;
-                height: 64px;
-
-                .name {
-                    padding: 10px 15px;
+                .location {
+                    margin-bottom: 25px;
+                }
+                .tags_container {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                .picture {
-                    border-radius: 50%;
-                    width: 64px;
-                    height: 64px;
+                    flex-direction: row;
+                    gap: 25px;
+    
+                    .tag_value {
+                        background-color: rgb(255, 96, 96);
+                        color: white;
+                        font-size: 14px;
+                        padding: 5px 30px;
+                        border-radius: 10px;
+                    }
                 }
             }
-        }
-        .notation_container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 25px;
-
-            .tags_container {
+            .publisher_rating_container {
                 display: flex;
-                flex-direction: row;
-                gap: 25px;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 40px;
 
-                .tag_value {
-                    background-color: rgb(255, 96, 96);
-                    color: white;
-                    font-size: 14px;
-                    padding: 5px 30px;
-                    border-radius: 10px;
+                .publisher_container {
+                    display: flex;
+                    flex-direction: row;
+                    height: 64px;
+
+                    .name {
+                        padding: 10px 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: right;
+                    }
+
+                    .picture {
+                        border-radius: 50%;
+                        width: 64px;
+                        height: 64px;
+                    }
                 }
             }
-
         }
         .description_container {
             display: flex;
@@ -67,8 +72,6 @@
     }
 }
 
+@media (max-width: 640px) {
 
-.description_container {
-    display: flex;
-    flex-direction: row;
 }
