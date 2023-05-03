@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import CollapseComponent from "../../components/CollapseComponent"
+import RatingControl from "../../components/rating"
 import Logements from '../../data/logements.json'
 import './index.scss'
 
@@ -10,26 +11,30 @@ export default function Logement() {
     const selectedLogement = Logements.find(l=>l.id===selectedLogementId)
 
     return(
-        <div className="logement_container">
+        <div className="logement_page_container">
             <div className="slider_temp_container"></div>
             <div className="description_main_container">
                 <div className="presentation_container">
                     <div className="name_location_container">
                         <h1 className="name">{selectedLogement.title}</h1>
-                        <p className="location">{selectedLogement.description}</p>
+                        <p className="location">{selectedLogement.location}</p>
                     </div>
                     <div className="publisher_container">
-                        <p className="name"></p>
-                        <img className="picture" src="" alt="" />
+                        <p className="name">{selectedLogement.host.name}</p>
+                        <img className="picture" src={selectedLogement.host.picture} alt="Photo de l'hôte" />
                     </div>
                 </div>
                 <div className="notation_container">
-                    <div className="tags_container"></div>
-                    <div className="stars_container"></div>
+                    <div className="tags_container">
+                        {selectedLogement.tags.map(tag=>(
+                            <div className="tag_value">{tag}</div>
+                        ))}
+                    </div>
+                    <RatingControl value={selectedLogement.rating} />
                 </div>
                 <div className="description_container">
-                    <CollapseComponent title='Description' value='Description' />
-                    <CollapseComponent title='Description' value='Description' />
+                    <CollapseComponent className='collapse' title='Description' value={selectedLogement.description} />
+                    <CollapseComponent className='collapse' title='Équipements' value={selectedLogement.equipments.join()} />
                 </div>
             </div>
         </div>
