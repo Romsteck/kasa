@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import NotFound from '../NotFound'
 import ImagesSlider from "../../components/ImagesSlider"
 import CollapseComponent from "../../components/CollapseComponent"
-import RatingControl from "../../components/rating"
+import RatingControl from "../../components/Rating"
 import Logements from '../../data/logements.json'
 import './index.scss'
 
@@ -23,7 +23,7 @@ export default function Logement() {
                         <div className="name_location_container">
                             <h1 className="name">{selectedLogement.title}</h1>
                             <p className="location">{selectedLogement.location}</p>
-                            <div className="tags_container">{selectedLogement.tags.map(tag=>(<div className="tag_value">{tag}</div>))}</div>
+                            <div className="tags_container">{selectedLogement.tags.map(tag=>(<div key={tag} className="tag_value">{tag}</div>))}</div>
                         </div>
                         <div className="publisher_rating_container">
                             <div className="publisher_container">
@@ -42,7 +42,7 @@ export default function Logement() {
                         <CollapseComponent
                             className='collapse'
                             title='Équipements'
-                            value={selectedLogement.equipments.map((equipment) => (<>{equipment}<br /></>))}
+                            value={selectedLogement.equipments.map((equipment) => (<p key={equipment}>{equipment}<br /></p>))}
                         />
                     </div>
                 </div>

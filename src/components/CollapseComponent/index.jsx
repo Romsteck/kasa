@@ -21,7 +21,7 @@ export default function CollapseComponent({ title, value }) {
                 ref={parentRef}
                 style={ opened ? {height: parentRef.current.scrollHeight+'px'} : {height: '0px'} }
             >
-                <p className='value'>{value}</p>
+                <div className='value'>{value}</div>
             </div>
         </div>
     )
