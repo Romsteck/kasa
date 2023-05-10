@@ -21,15 +21,15 @@ export default function ImagesSlider({ links }) {
     if (links.length===1) {
         return(
             <div className="images_slider_container">
-                <img className='selected_picture' src={links[currentIndex]} alt="" />
+                <img className='selected_picture' src={links[currentIndex]} alt="Logement" />
             </div>
         )
     } else {
         return(
             <div className="images_slider_container">
-                <img className='selected_picture' src={links[currentIndex]} alt="" />
-                <img className='icon previous' onClick={selectPrevious} src={Previous} alt="" />
-                <img className='icon next' src={Next} onClick={selectNext} alt="" />
+                <img className='selected_picture' src={links[currentIndex]} alt="Logement" />
+                <img className='icon previous' onClick={selectPrevious} src={Previous} alt="Précédente" />
+                <img className='icon next' src={Next} onClick={selectNext} alt="Suivante" />
                 <p className='counter'>{currentIndex+1}/{links.length}</p>
             </div>
         )

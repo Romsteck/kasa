@@ -28,7 +28,7 @@ export default function Logement() {
                         <div className="publisher_rating_container">
                             <div className="publisher_container">
                                 <p className="name">{selectedLogement.host.name}</p>
-                                <img className="picture" src={selectedLogement.host.picture} alt="Photo de l'hôte" />
+                                <img className="picture" src={selectedLogement.host.picture} alt="Hôte" />
                             </div>
                             <RatingControl value={selectedLogement.rating} />
                         </div>
